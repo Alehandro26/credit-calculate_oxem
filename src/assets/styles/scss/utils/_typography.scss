@@ -1,0 +1,51 @@
+@import "_media";
+
+@mixin FontBold($size, $line-height) {
+  font-family: Nekst;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: 0;
+}
+
+@mixin Font($size, $line-height) {
+  font-family: Gilroy;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: 0;
+}
+
+@mixin H1 {
+  @include FontBold(34px, 90%);
+
+  @include tablet {
+      @include FontBold(54px, 90%);
+    }
+}
+
+@mixin Number {
+  @include FontBold(22px, 20px);
+
+  @include tablet {
+    @include FontBold(30px, 36px);
+  }
+}
+
+@mixin BigNumber {
+  @include FontBold(22px, 20px);
+
+  @include tablet {
+    @include FontBold(54px, 90%);
+  }
+}
+
+@mixin Text {
+  @include Font(14px, 136%);
+
+  @include tablet {
+    @include Font(16px, 20px);
+  }
+
+  @include medium-desktop {
+    @include Font(16px, 24px);
+  }
+}

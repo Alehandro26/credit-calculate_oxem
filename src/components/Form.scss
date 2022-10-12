@@ -1,0 +1,100 @@
+.form {
+    &__inputs {
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include tablet {
+            padding-bottom: 37px;
+            gap: 32px;
+        }
+
+        @include medium-desktop {
+            padding-bottom: 44px;
+            flex-direction: row;
+        }
+    }
+
+    &__price {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 44px;
+        }
+
+        @include medium-desktop {
+            gap: 180px;
+        }
+    }
+
+    &__wrapper-price {
+        p {
+            margin-bottom: 2px;
+            @include Text;
+            color: $dark-grey;
+
+            @include medium-desktop {
+                margin-bottom: 8px;
+                color: $grey;
+            }
+        }
+
+        span {
+            @include BigNumber;
+            color: $dark-grey;
+
+            @include medium-desktop {
+                color: $grey;
+            }
+        }
+
+        &.pay {
+            @include tablet {
+                margin-left: 41px;
+            }
+
+            @include small-desktop {
+                margin-left: 157px;
+            }
+
+            @include medium-desktop {
+                margin: 0;
+            }
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 18px 0 22px;
+        margin-top: 3px;
+        @include Number;
+        color: #FFFFFF;
+        background: $orange;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: background .3s ease;
+
+        @include tablet {
+            padding: 14px 0 18px;
+            max-width: 345px;
+        }
+
+        @include medium-desktop {
+            margin-left: auto;
+            max-width: 426px;
+        }
+
+        &:hover {
+            background: #111111;
+        }
+
+        &:active {
+            background: $grey;
+        }
+    }
+}
